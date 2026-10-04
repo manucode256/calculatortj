@@ -1,0 +1,405 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    background-image: url(kg.jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* ===== Тугмаи ⇄ — ҳамеша дар болои экран ===== */
+.toggle-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 999;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 18px;
+    border: 1px solid rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ===== Контейнери асосӣ (Адаптивӣ барои ҳама экранҳо) ===== */
+.div {
+    width: 100%;
+    max-width: 380px; /* Дар ноутбук андозаи хушрӯйи 380px мегирад */
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 16px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+.div:hover {
+    box-shadow: 5px 5px 14px black;
+}
+
+/* ===== Варақаҳо (Калкулятор / Асъор / Таърих) ===== */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 6px;
+}
+.tab-btn {
+    flex: 1;
+    width: auto;
+    height: 36px;
+    border-radius: 14px;
+    background-color: white;
+    color: #111;
+    font-size: 13px;
+    border: solid 1px black;
+    margin: 0;
+    cursor: pointer;
+}
+.tab-btn.active {
+    background-color: white;
+    color: #111;
+    font-weight: bold;
+}
+.tab-btn:hover {
+    background-color: gold;
+}
+
+/* ===== Дисплей ===== */
+.display {
+    width: 100%;
+    box-sizing: border-box;
+    height: 65px;
+    font-size: 28px;
+    color: #111;
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 14px;
+    text-align: right;
+    padding: 0 14px;
+    margin-bottom: 12px;
+    margin-top: 6px;
+}
+
+/* ===== sin cos () ===== */
+.mem-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 6px;
+}
+.mem-btn {
+    flex: 1;
+    width: auto;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: white;
+    color: #111;
+    border: solid 1px black;
+    margin: 0;
+    cursor: pointer;
+}
+.mem-btn:hover {
+    background-color: gold;
+}
+
+/* ===== Тугмаҳои рақам ва амалҳо ===== */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+button {
+    width: 100%;
+    aspect-ratio: 1; /* Тугмаҳоро ҳамеша доираи аниқ нигоҳ медорад */
+    height: 70px;
+    color: black;
+    margin: 0;
+    border-radius: 50px;
+    border: solid 1px black;
+    background-color: white; body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    background-image: url(kg.jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* ===== Тугмаи ⇄ — ҳамеша дар болои экран ===== */
+.toggle-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 999;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 18px;
+    border: 1px solid rgba(255,255,255,0.4);
+    cursor: pointer;
+}
+.toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ===== Контейнери асосӣ (Адаптивӣ барои ҳама экранҳо) ===== */
+.div {
+    width: 100%;
+    max-width: 380px; /* Дар ноутбук андозаи хушрӯйи 380px мегирад */
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 16px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+.div:hover {
+    box-shadow: 5px 5px 14px black;
+}
+
+/* ===== Варақаҳо (Калкулятор / Асъор / Таърих) ===== */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 6px;
+}
+.tab-btn {
+    flex: 1;
+    width: auto;
+    height: 36px;
+    border-radius: 14px;
+    background-color: white;
+    color: #111;
+    font-size: 13px;
+    border: solid 1px black;
+    margin: 0;
+    cursor: pointer;
+}
+.tab-btn.active {
+    background-color: white;
+    color: #111;
+    font-weight: bold;
+}
+.tab-btn:hover {
+    background-color: gold;
+}
+
+/* ===== Дисплей ===== */
+.display {
+    width: 100%;
+    box-sizing: border-box;
+    height: 65px;
+    font-size: 28px;
+    color: #111;
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    border-radius: 14px;
+    text-align: right;
+    padding: 0 14px;
+    margin-bottom: 12px;
+    margin-top: 6px;
+}
+
+/* ===== Хотира (M+, M-, MR, MC) ===== */
+.mem-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 6px;
+}
+.mem-btn {
+    flex: 1;
+    width: auto;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: white;
+    color: #111;
+    border: solid 1px black;
+    margin: 0;
+    cursor: pointer;
+}
+.mem-btn:hover {
+    background-color: gold;
+}
+
+/* ===== Тугмаҳои рақам ва амалҳо ===== */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+button {
+    width: 100%;
+    aspect-ratio: 1; /* Тугмаҳоро ҳамеша доираи аниқ нигоҳ медорад */
+    height: auto;
+    color: black;
+    margin: 0;
+    border-radius: 50%;
+    border: solid 1px black;
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+button:hover {
+    transition: all 0.1s;
+    background-color: gold;
+    color: white;
+}
+
+/* Тугмаҳои амал ва функсияҳо */
+.btn-op {
+    color: #4da3ff;
+    font-weight: bold;
+}
+.btn-fn {
+    color: #1761af;
+    font-size: 16px;
+}
+.btn-clear {
+    color: #080101;
+    font-weight: bold;
+}
+
+/* Тугмаи 0 ва Баробар (=) */
+.zero {
+    grid-column: span 2;
+    border-radius: 27px;
+    aspect-ratio: auto;
+    height: 100%;
+}
+.musobi {
+    grid-row: span 2;
+    aspect-ratio: auto;
+    height: 100%;
+    background-color: deepskyblue;
+    color: #111;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 35px;
+}
+.musobi:hover {
+    background-color: #ffd700;
+}
+
+/* ===== Варақаи асъор ===== */
+.currency-input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+    background-color: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 14px;
+    text-align: right;
+    padding: 0 10px;
+}
+ /* ===== Танзимоти махсус барои телефонҳо ===== */
+@media (max-width: 480px) {
+    .div {
+        width: 95%; /* Дар телефон 95%-и экранро гирифта калон мешавад */
+        padding: 12px;
+    }
+    button {
+        font-size: 22px; /* Рақамҳо дар телефон калону аниқ мешаванд */
+    }
+}
+    font-size: 20px;
+    cursor: pointer;
+}
+button:hover {
+    transition: all 0.1s;
+    background-color: gold;
+    color: white;
+}
+
+/* Тугмаҳои амал ва функсияҳо */
+.btn-op {
+    color: #4da3ff;
+    font-weight: bold;
+}
+.btn-fn {
+    color: #ffb84d;
+    font-size: 16px;
+}
+.btn-clear {
+    color: #ff5c4d;
+    font-weight: bo
+}
+
+/* Тугмаи 0 ва Баробар (=) */
+.zero {
+    grid-column: span 2;
+    border-radius: 27px;
+    aspect-ratio: auto;
+    height: 100%;
+}
+.musobi {
+    grid-row: span 2;
+    aspect-ratio: auto;
+    height: 100%;
+    background-color: deepskyblue;
+    color: #111;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 35px;
+}
+.musobi:hover {
+    background-color: #ffd700;
+}
+
+/* ===== Варақаи асъор ===== */
+.currency-input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+    background-color: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 14px;
+    text-align: right;
+    padding: 0 10px;
+}
+ /* ===== Танзимоти махсус барои телефонҳо ===== */
+@media (max-width: 480px) {
+    .div {
+        width: 95%; /* Дар телефон 95%-и экранро гирифта калон мешавад */
+        padding: 12px;
+    }
+    button {
+        font-size: 22px; /* Рақамҳо дар телефон калону аниқ мешаванд */
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Калкулятор.тҷ</title>
+  <link href="calculatortj.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <button id="toggleBtn" class="toggle-btn" onclick="toggleView()">⇄</button>
+  <div class="div" id="calcBox">
+    <div class="tabs">
+      <button class="tab-btn active" id="tabBtn-calc" onclick="switchTab('calc')">Калкулятор</button>
+      <button class="tab-btn" id="tabBtn-currency" onclick="switchTab('currency')">Асъор</button>
+      <button class="tab-btn" id="tabBtn-history" onclick="switchTab('history')">Таърих</button>
+    </div>
+    <!-- ===== Варақаи калкулятор ===== -->
+    <div class="tab-content" id="calcTab">
+      <input type="text" id="display" class="display" disabled>
+
+      <div class="mem-row">
+        <!-- Қавсҳо танҳо ба экран илова мешаванд -->
+        <button class="mem-btn" onclick="appendValue('(')">(</button>
+        <button class="mem-btn" onclick="appendValue(')')">)</button>
+
+<!-- Вазъиятҳои тригонометрӣ -->
+        <button class="mem-btn" onclick="calculateSin()">Sin</button>
+        <button class="mem-btn" onclick="calculateCos()">Cos</button>
+      </div>
+      <div class="buttons">
+        <button class="btn-clear" onclick="clearDisplay()">C</button>
+        <button class="btn-op" onclick="appendValue('÷')">÷</button>
+        <button class="btn-op" onclick="appendValue('×')">×</button>
+        <button class="btn-op" onclick="deleteLast()">⌫</button>
+        <button class="btn-fn" onclick="squareRoot()">√</button>
+        <button class="btn-fn" onclick="square()">x²</button>
+        <button class="btn-fn" onclick="toggleSign()">±</button>
+        <button class="btn-op" onclick="appendValue('-')">-</button>
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button class="btn-op" onclick="appendValue('+')">+</button>
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button class="btn-fn" onclick="applyPercent()">%</button>
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button class="musobi" onclick="calculate()">=</button>
+        <button class="zero" onclick="appendValue('0')">0</button>
+        <button onclick="appendValue(',')">,</button>
+      </div>
+    </div>
+    <!-- ===== Варақаи асъор ===== -->
+    <div class="tab-content" id="currencyTab" style="display:none">
+      <input type="number" id="amountInput" class="currency-input" placeholder="Маблағ" value="1">
+      <div class="currency-row">
+        <select id="fromCurrency" class="currency-select"></select>
+        <button class="swap-currency" onclick="swapCurrency()">⇄</button>
+        <select id="toCurrency" class="currency-select"></select>
+      </div>
+      <button class="convert-btn" onclick="convertCurrency()">Ҳисоб кардан</button>
+      <div id="currencyResult" class="currency-result"></div>
+      <div id="currencyStatus" class="currency-status"></div>
+    </div>
+    <!-- ===== Варақаи таърих ===== -->
+    <div class="tab-content" id="historyTab" style="display:none">
+      <div id="historyList" class="history-list"></div>
+      <button class="clear-history-btn" onclick="clearHistory()">Тоза кардани таърих</button>
+    </div>
+  </div>
+  <script src="calculatortj.js"></script>
+</body>
+</html>
